@@ -1,0 +1,19 @@
+# Python 3.10+ (Google Colab). Versions as used for the manuscript where stated in Sect. 2.12.
+pandas
+numpy
+scipy
+geopandas
+shapely
+pyproj
+matplotlib
+mapclassify
+libpysal
+esda
+statsmodels
+pymannkendall
+pymc==5.28.*
+numpyro
+arviz==0.22.*
+requests
+openpyxl
+gdown
