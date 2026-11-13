@@ -1,0 +1,22 @@
+Respiratory, FE main lag 0: 0.96 (0.87–1.06).
+Lag-0 sensitivity analyses (i)–(v) and calendar-month FE gave respiratory IRRs between 0.93 and 1.12.
+Intervals excluding 1: (v) Excl. FY2022 (FY2565 BE) 1.12 (1.01–1.24).
+  (i) Excl. chronic rhinitis: 0.96 (0.87–1.06)
+  (ii) Area-weighted PM2.5: 0.97 (0.88–1.07)
+  (iii) Excl. hospital tambons: 0.97 (0.86–1.09)
+  (iv) District level: 0.93 (0.83–1.05)
+  (v) Excl. FY2022 (FY2565 BE): 1.12 (1.01–1.24)
+  Calendar-month FE: 0.94 (0.78–1.14)
+Outcome subsets (viii)–(ix), tambons with any visits only:
+  (viii) COPD + asthma + pneumonia [Respiratory]: 0.65 (0.54–0.78); 50 tambons; alpha 0.61 (NB2 profile-ML)
+  (viii) COPD exacerbation only [Respiratory]: 0.97 (0.89–1.06); 35 tambons; alpha 0.0665 (NB2 profile-ML)
+  (viii) Asthma only [Respiratory]: 1.10 (0.78–1.55); 21 tambons; alpha 0.482 (NB2 profile-ML)
+  (viii) Pneumonia only [Respiratory]: 0.58 (0.44–0.75); 26 tambons; alpha 0.912 (NB2 profile-ML)
+  (ix) Stroke only [Cardiovascular]: 0.92 (0.84–1.01); 92 tambons; alpha 0.213 (NB2 profile-ML)
+  (ix) Ischaemic heart disease only [Cardiovascular]: 1.00 (0.82–1.23); 18 tambons; alpha 1e-05 (NB2 profile-ML (α ชนขอบ))
+Excluding the 12 hospital tambons (hospcode ของโรงพยาบาลรัฐ 12 แห่ง) changed the pooled between-tambon IRR by +32% (from 0.31 to 0.409) but the within-tambon (FE) IRR by +0.3% (from 0.964 to 0.967).
+FE vs NB-BYM2 within-tambon IRR: max absolute difference 1.1% across groups and lags.
+Buffer 150 m (respiratory, FE): downwind 0.94 (0.85–1.05), not downwind/none 1.04 (0.93–1.15), roadside low 0.98 (0.85–1.13), high 1.02 (0.90–1.17); interaction p: downwind 0.00, low 0.27, high 0.77.
+Buffer 300 m (respiratory, FE): downwind 0.94 (0.85–1.05), not downwind/none 1.04 (0.93–1.15), roadside low 1.02 (0.89–1.17), high 1.00 (0.88–1.15); interaction p: downwind 0.00, low 0.72, high 0.49.
+Buffer 500 m (respiratory, FE): downwind 0.94 (0.85–1.05), not downwind/none 1.04 (0.93–1.15), roadside low 1.02 (0.89–1.17), high 1.00 (0.88–1.15); interaction p: downwind 0.00, low 0.72, high 0.49.
+Model: NB2 with tambon fixed effects, SE nonrobust; months 2022-01–2024-11 (December excluded), 109 tambons; PM2.5 area-weighted column: pm25_sat_area.

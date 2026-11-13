@@ -1,0 +1,38 @@
+Data: 109 tambons, 33 months (2022-01 to 2024-11, December excluded), 3,597 tambon-months, 354,785 visits Respiratory 132,802, Cardiovascular 55,559, Eye 53,188, Skin 113,236.
+Fiscal years: {2565: 9, 2566: 11, 2567: 11, 2568: 2} months per fiscal year (BE).
+Downwind tambons (sector 247.5–337.5°): 60 of 111 in the province, 59 of 109 analysed; no-facility tambons: [['นาโฉง', 1], ['หนองแซง', 0]].
+Analysed: roadside groups: {'none': 80, 'low': 15, 'high': 14}.
+MCMC: PyMC 5.28.5, NumPyro NUTS (dense mass), 4 chains × (300 tuning + 300 draws), seed 2026.
+Convergence: max R-hat = 1.010; min bulk ESS = 855; min tail ESS = 809; divergent transitions = 0; target acceptance raised to 0.97 in 2 model(s).
+Spatial share rho = 0.03 (95% CrI 0.00–0.32).
+Delta elpd_LOO, NB-BYM2, no PM2.5 vs NB, no PM2.5: 3.7 (SE 2.2).
+Delta elpd_LOO, NB-BYM2 + PM2.5 vs NB-BYM2, no PM2.5: -3.0 (SE 2.1).
+Delta elpd_LOO, NB-BYM2 + PM2.5 × modifiers vs NB-BYM2 + PM2.5: 3.2 (SE 3.9).
+Respiratory: lag 0 0.97 (0.87–1.07), P(IRR>1) = 0.26; lag 1 0.83 (0.75–0.93); lag 0–1 0.84 (0.74–0.96); between 1.04 (0.19–5.92).
+Cardiovascular: lag 0 0.92 (0.84–1.01), P(IRR>1) = 0.04; lag 1 0.90 (0.81–0.99); lag 0–1 0.87 (0.77–0.97); between 0.87 (0.14–5.32).
+Eye: lag 0 1.00 (0.94–1.06), P(IRR>1) = 0.45; lag 1 0.98 (0.91–1.04); lag 0–1 0.98 (0.90–1.06); between 0.94 (0.18–4.24).
+Skin: lag 0 1.04 (0.99–1.09), P(IRR>1) = 0.96; lag 1 1.02 (0.97–1.07); lag 0–1 1.05 (0.99–1.13); between 1.17 (0.24–6.00).
+EM Downwind (n = 59): 0.94 (0.85–1.04).
+EM Not downwind (n = 50): 1.04 (0.93–1.15).
+EM Roadside none (n = 80): 1.00 (0.90–1.10).
+EM Roadside low (n = 15): 0.96 (0.84–1.10).
+EM Roadside high (n = 14): 0.94 (0.84–1.07).
+P(downwind > not downwind) = 0.00.
+P(roadside low > none) = 0.24.
+P(roadside high > none) = 0.11.
+Rate ratio Respiratory, PM2.5 Q4 vs Q1: 0.90 (95% CI 0.31–2.59), tambons 27 vs 28.
+Rate ratio Respiratory, Downwind vs other: 1.09 (95% CI 0.44–2.69), tambons 59 vs 50.
+Rate ratio Respiratory, Roadside high vs none: 1.67 (95% CI 0.60–4.67), tambons 14 vs 80.
+Rate ratio Cardiovascular, PM2.5 Q4 vs Q1: 0.50 (95% CI 0.13–1.95), tambons 27 vs 28.
+Rate ratio Cardiovascular, Downwind vs other: 3.18 (95% CI 0.85–11.96), tambons 59 vs 50.
+Rate ratio Cardiovascular, Roadside high vs none: 4.33 (95% CI 0.89–21.06), tambons 14 vs 80.
+Rate ratio Eye, PM2.5 Q4 vs Q1: 0.78 (95% CI 0.33–1.82), tambons 27 vs 28.
+Rate ratio Eye, Downwind vs other: 1.04 (95% CI 0.47–2.29), tambons 59 vs 50.
+Rate ratio Eye, Roadside high vs none: 1.33 (95% CI 0.46–3.86), tambons 14 vs 80.
+Rate ratio Skin, PM2.5 Q4 vs Q1: 1.05 (95% CI 0.61–1.80), tambons 27 vs 28.
+Rate ratio Skin, Downwind vs other: 1.27 (95% CI 0.72–2.24), tambons 59 vs 50.
+Rate ratio Skin, Roadside high vs none: 1.13 (95% CI 0.47–2.75), tambons 14 vs 80.
+Predicted respiratory SIR range 0.003–16.7; elevated (P > 0.8) 22, low (P < 0.2) 84, uncertain 3.
+Of the 22 elevated: district-seat 7, downwind 14, PM2.5 Q4 5, roadside high 3; priority tambons 16.
+Attributable respiratory visits above 15 µg/m³ (Thai standard): -5,327 (95% CrI -24,925 to 10,391), -4.0% of predicted visits.
+Attributable respiratory visits above 5 µg/m³ (WHO guideline): -9,781 (95% CrI -47,309 to 18,366), -7.4% of predicted visits.

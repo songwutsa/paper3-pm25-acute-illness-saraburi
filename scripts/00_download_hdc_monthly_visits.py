@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-fetch_hdc_pm25_tambon_monthly.py
+00_download_hdc_monthly_visits.py
 ดึงข้อมูลรายงาน HDC "โรคที่เกี่ยวข้องกับ PM2.5" (s_pm25_disease) จังหวัดสระบุรี รายตำบล **รายเดือน**
-ปีงบประมาณ 2565 ถึงปีล่าสุด แล้วบันทึกเป็น CSV ที่ Notebook 20 อ่านได้ทันที (คอลัมน์ a_code + ym)
+ปีงบประมาณ 2565 ถึงปีล่าสุด แล้วบันทึกเป็น CSV ที่ notebooks/11 และ 14 อ่านได้ทันที (คอลัมน์ a_code + ym)
 
 ข้อเท็จจริงที่ต้องรู้ก่อน
 - ตาราง s_pm25_disease ใน MOPH Open Data ดึงได้ทีละ "ปีงบประมาณ" (ไฟล์เดิมได้ ~147 แถวดิบต่อปี = ไม่มีมิติเดือน)
@@ -20,7 +20,7 @@ fetch_hdc_pm25_tambon_monthly.py
     4) สร้างไฟล์ hdc_request_template.json (ตัวอย่างพิมพ์ได้ด้วย --make-template) แล้วแทนค่าปี/เดือนด้วยตัวแปร
          {fy}        ปีงบ พ.ศ. เช่น 2567          {month}  เดือน 1–12        {mm}  เดือน 2 หลัก 01–12
          {year_be}   ปีปฏิทิน พ.ศ. ของเดือนนั้น    {year_ce} ปีปฏิทิน ค.ศ.     {yyyymm_ce} เช่น 202310  {yyyymm_be} เช่น 256610
-    5) python fetch_hdc_pm25_tambon_monthly.py --source template --template hdc_request_template.json
+    5) python scripts/00_download_hdc_monthly_visits.py --source template --template hdc_request_template.json
 
 วิธีที่ 3  --source files --files-dir โฟลเดอร์
     ดาวน์โหลด Excel/CSV จากหน้ารายงาน HDC ทีละเดือนเอง ตั้งชื่อไฟล์ให้มีปีงบและเดือน เช่น 2567_10.xlsx (ปีงบ_เดือน)
@@ -30,12 +30,12 @@ fetch_hdc_pm25_tambon_monthly.py
 
 วิธีใช้
     pip install requests pandas openpyxl
-    python fetch_hdc_pm25_tambon_monthly.py --probe                 (ดูคอลัมน์ดิบของ Open Data 1 ปี — ทำก่อน)
-    python fetch_hdc_pm25_tambon_monthly.py                         (วิธีที่ 1, ปีงบ 2565 ถึงปีปัจจุบัน)
-    python fetch_hdc_pm25_tambon_monthly.py --make-template         (พิมพ์ตัวอย่างไฟล์ template)
-    python fetch_hdc_pm25_tambon_monthly.py --source template --template hdc_request_template.json
-    python fetch_hdc_pm25_tambon_monthly.py --source files --files-dir hdc_monthly_downloads
-    python fetch_hdc_pm25_tambon_monthly.py --annual                (แบบเดิม: รายปีงบ)
+    python scripts/00_download_hdc_monthly_visits.py --probe                 (ดูคอลัมน์ดิบของ Open Data 1 ปี — ทำก่อน)
+    python scripts/00_download_hdc_monthly_visits.py                         (วิธีที่ 1, ปีงบ 2565 ถึงปีปัจจุบัน)
+    python scripts/00_download_hdc_monthly_visits.py --make-template         (พิมพ์ตัวอย่างไฟล์ template)
+    python scripts/00_download_hdc_monthly_visits.py --source template --template hdc_request_template.json
+    python scripts/00_download_hdc_monthly_visits.py --source files --files-dir hdc_monthly_downloads
+    python scripts/00_download_hdc_monthly_visits.py --annual                (แบบเดิม: รายปีงบ)
 """
 import argparse, datetime as dt, glob, json, os, re, sys, time
 
@@ -524,7 +524,7 @@ def main():
                "months": int(res.ym.nunique()), "tambons": int(res.a_code.nunique())},
               open(out.replace(".csv", "_meta.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"\n✓ บันทึก {out} ({len(res):,} แถว = {res.a_code.nunique()} ตำบล × {res.ym.nunique()} เดือน, {res.ym.min()} ถึง {res.ym.max()})")
-    print("  อัปโหลดไป Drive แล้วตั้ง HDC_MONTHLY_CSV ใน Notebook 20 เป็น path ของไฟล์นี้")
+    print("  อัปโหลดไป Drive แล้วตั้ง HDC_MONTHLY_CSV ใน notebooks/11 และ 14 เป็น path ของไฟล์นี้")
     print("\nสรุปรายเดือน (11 โรค):\n" + res.groupby("ym")["total_11"].sum().to_string())
 
 
