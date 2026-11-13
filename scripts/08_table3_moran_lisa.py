@@ -3,7 +3,7 @@ Crude rates per 1,000 per year and empirical Bayes (EB)-smoothed rates for 109 t
 (33 months, December excluded); global Moran's I on log EB-smoothed rates with Queen contiguity weights and
 999 permutations (EB Moran's I of Assuncao and Reis as an alternative); LISA high-high clusters under
 Benjamini-Hochberg FDR control (alpha = 0.05).
-usage: python scripts/moran_lisa.py data/processed results"""
+usage: python scripts/08_table3_moran_lisa.py data/processed results/08-09_table3_spatial_clustering"""
 import os, sys, numpy as np, pandas as pd, geopandas as gpd, libpysal, esda, warnings
 from esda.smoothing import Empirical_Bayes
 warnings.filterwarnings("ignore")

@@ -1,8 +1,8 @@
 """Fig. 4 and Sect. 2.4 / 3.1 — tambon exposure variables.
 (a) population-weighted mean PM2.5, 2016-2024; (b) tambons downwind of DIW facilities
-(interior point within 5 km of a facility at a bearing of 247.5-337.5 deg from it; same rule as Notebook 23);
+(interior point within 5 km of a facility at a bearing of 247.5-337.5 deg from it; same rule as notebooks/11);
 (c) share of population within 500 m of Highway 1 or 2. Tambons without a reporting facility are hatched.
-usage: python scripts/make_fig4.py data/processed figures/Figure_4"""
+usage: python scripts/07_fig4_exposure_maps.py data/processed figures/Figure_4"""
 import os, sys, numpy as np, pandas as pd, geopandas as gpd, matplotlib
 matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from matplotlib.patches import Patch

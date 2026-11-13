@@ -1,5 +1,5 @@
-"""Fig. 5 — space-time permutation scan clusters by outcome group (output of stscan.py).
-usage: python scripts/make_fig5.py results/Fig5_scan_clusters.csv data/processed/sat_pm25_tambon_summary.gpkg figures/Figure_5"""
+"""Fig. 5 — space-time permutation scan clusters by outcome group (output of 09_table3_spacetime_scan.py).
+usage: python scripts/10_fig5_scan_cluster_maps.py results/08-09_table3_spatial_clustering/Fig5_scan_clusters.csv data/processed/sat_pm25_tambon_summary.gpkg figures/Figure_5"""
 import sys, numpy as np, pandas as pd, geopandas as gpd, matplotlib
 matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from matplotlib.patches import Patch

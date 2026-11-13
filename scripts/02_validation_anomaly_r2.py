@@ -1,5 +1,5 @@
 """Sect. 2.3/3.1 — agreement of satellite PM2.5 with station PM2.5 on deseasonalised monthly anomalies.
-usage: python scripts/validation_anomaly.py data/processed/sat_validation_monthly_pairs.csv   (output of Notebook 06)"""
+usage: python scripts/02_validation_anomaly_r2.py data/processed/sat_validation_monthly_pairs.csv   (output of notebooks/01)"""
 import sys, numpy as np, pandas as pd, statsmodels.formula.api as smf
 d = pd.read_csv(sys.argv[1], parse_dates=["time"]); d["moy"] = d.time.dt.month; d["yr"] = d.time.dt.year
 r2 = lambda a, b: np.corrcoef(a, b)[0, 1] ** 2

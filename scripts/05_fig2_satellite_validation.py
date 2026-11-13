@@ -1,5 +1,5 @@
 """Fig. 2 and Sect. 3.1 — validation of monthly satellite PM2.5 against PCD stations (41 stations, 2016-2024).
-usage: python scripts/make_fig2.py data/processed/sat_validation_monthly_pairs.csv figures/Figure_2"""
+usage: python scripts/05_fig2_satellite_validation.py data/processed/sat_validation_monthly_pairs.csv figures/Figure_2"""
 import sys, numpy as np, pandas as pd, matplotlib
 matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from scipy import stats

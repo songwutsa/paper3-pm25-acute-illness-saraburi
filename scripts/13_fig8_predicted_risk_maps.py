@@ -1,5 +1,5 @@
 """Fig. 8 — predicted respiratory visit ratio, exceedance probability and surveillance-priority tambons (NB-BYM2 + PM2.5).
-usage: python scripts/make_fig8.py results/nb23/Risk_all_tambons.csv data/processed/sat_pm25_tambon_summary.gpkg figures/Figure_8"""
+usage: python scripts/13_fig8_predicted_risk_maps.py results/11_main_nb_bym2/Risk_all_tambons.csv data/processed/sat_pm25_tambon_summary.gpkg figures/Figure_8"""
 import sys, numpy as np, pandas as pd, geopandas as gpd, matplotlib
 matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from matplotlib.patches import Patch

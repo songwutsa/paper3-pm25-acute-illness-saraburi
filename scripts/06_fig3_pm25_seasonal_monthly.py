@@ -1,6 +1,6 @@
 """Fig. 3 — seasonal and monthly variation of population-weighted satellite PM2.5, Saraburi (111 tambons).
-Input: sat_pm25_tambon_monthly.csv (Notebook 06).
-usage: python scripts/make_fig3.py data/processed/sat_pm25_tambon_monthly.csv figures/Figure_3"""
+Input: sat_pm25_tambon_monthly.csv (notebooks/01).
+usage: python scripts/06_fig3_pm25_seasonal_monthly.py data/processed/sat_pm25_tambon_monthly.csv figures/Figure_3"""
 import sys, numpy as np, pandas as pd, matplotlib
 matplotlib.use("Agg"); import matplotlib.pyplot as plt
 src, out = sys.argv[1:3]

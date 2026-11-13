@@ -1,5 +1,5 @@
 """Fig. 6 — within-tambon IRR (95% CrI) per 10 µg/m3 by outcome group and lag (NB-BYM2; Table 5).
-usage: python scripts/make_fig6.py results/nb23/Table5_IRR_long.csv figures/Figure_6"""
+usage: python scripts/12_fig6_irr_by_lag.py results/11_main_nb_bym2/Table5_IRR_long.csv figures/Figure_6"""
 import sys, numpy as np, pandas as pd, matplotlib
 matplotlib.use("Agg"); import matplotlib.pyplot as plt
 src, out = sys.argv[1:3]

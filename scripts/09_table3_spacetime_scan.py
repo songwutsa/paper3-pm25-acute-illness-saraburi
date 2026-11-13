@@ -3,8 +3,8 @@ Data and windows as in the manuscript: 109 analysed tambons, Jan 2022 - Nov 2024
 circular windows on tambon interior points holding up to 25% of cases, temporal windows up to 50% of the months,
 999 permutations, ten highest-ranked clusters with no tambon in common.
 Cluster relative risk: RR = (O/E) / [(C - O) / (C - E)].
-usage: python scripts/stscan.py data/processed/hdc_saraburi_pm25_disease_tambon_monthly_2565_2569.csv \
-           data/processed/sat_pm25_tambon_summary.gpkg results [N_PERM]"""
+usage: python scripts/09_table3_spacetime_scan.py data/processed/hdc_saraburi_pm25_disease_tambon_monthly_2565_2569.csv \
+           data/processed/sat_pm25_tambon_summary.gpkg results/08-09_table3_spatial_clustering [N_PERM]"""
 import sys, numpy as np, pandas as pd, geopandas as gpd
 
 HDC, GPKG, OUT = sys.argv[1:4]; NPERM = int(sys.argv[4]) if len(sys.argv) > 4 else 999
