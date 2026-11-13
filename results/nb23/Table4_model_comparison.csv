@@ -1,0 +1,5 @@
+﻿,elpdLOO (SE),LODO RMSE,LODO Spearman,Last-period RMSE,Last-period Spearman
+"NB, no PM2.5","-10,253.1 (128.5)",139.09,-0.32,47.12,0.82
+"NB-BYM2, no PM2.5","-10,249.4 (127.6)",139.05,-0.22,47.16,0.82
+NB-BYM2 + PM2.5,"-10,252.4 (128.3)",139.09,-0.24,45.48,0.82
+NB-BYM2 + PM2.5 × modifiers,"-10,249.2 (127.6)",139.1,-0.24,45.94,0.82

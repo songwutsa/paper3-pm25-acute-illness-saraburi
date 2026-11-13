@@ -1,0 +1,16 @@
+﻿,max_rhat,min_ess_bulk,min_ess_tail,divergences,target_accept,passed
+bym2_pm_Respiratory_Lag0,1.0,1042.0,974.0,0,0.9,True
+bym2_pm_Respiratory_Lag1,1.0,855.0,899.0,0,0.9,True
+bym2_pm_Respiratory_Lag0-1,1.0,1036.0,1020.0,0,0.9,True
+bym2_pm_Cardiovascular_Lag0,1.01,1019.0,900.0,0,0.9,True
+bym2_pm_Cardiovascular_Lag1,1.0,1150.0,980.0,0,0.9,True
+bym2_pm_Cardiovascular_Lag0-1,1.01,955.0,1029.0,0,0.9,True
+bym2_pm_Eye_Lag0,1.01,862.0,930.0,0,0.97,True
+bym2_pm_Eye_Lag1,1.01,1032.0,930.0,0,0.97,True
+bym2_pm_Eye_Lag0-1,1.0,1225.0,988.0,0,0.9,True
+bym2_pm_Skin_Lag0,1.0,1097.0,809.0,0,0.9,True
+bym2_pm_Skin_Lag1,1.0,1157.0,994.0,0,0.9,True
+bym2_pm_Skin_Lag0-1,1.0,1055.0,933.0,0,0.9,True
+nb_iid_nopm_Respiratory,1.0,1097.0,1045.0,0,0.9,True
+bym2_nopm_Respiratory,1.0,1071.0,1094.0,0,0.9,True
+bym2_pm_mods_dw247p5-337p5_Respiratory,1.0,1092.0,913.0,0,0.9,True
