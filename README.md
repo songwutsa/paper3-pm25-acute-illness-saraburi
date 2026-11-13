@@ -13,7 +13,8 @@ Archived version: DOI `10.5281/zenodo.XXXXXXX` <!-- TODO: add after the Zenodo r
 ## Quick start
 
 - **Notebooks:** click **Open in Colab** in the table below, then **Runtime ▸ Run all**. The first code cell clones this repository and reads the inputs from `data/processed/`; outputs go to the matching `results/` folder of the clone. No Google Drive access is needed.
-- **Scripts:** `git clone https://github.com/songwutsa/paper3-pm25-healthcare-visits-saraburi`, `pip install -r requirements.txt`, and run the commands below from the repository root.
+- **Scripts in Colab:** open `notebooks/run_all_scripts.ipynb` (badge below the table) and choose **Runtime ▸ Run all**.
+- **Scripts locally:** `git clone https://github.com/songwutsa/paper3-pm25-healthcare-visits-saraburi`, `pip install -r requirements.txt`, and run the commands below from the repository root.
 
 ## Repository layout
 
@@ -24,7 +25,7 @@ Notebooks and scripts share one numbering, `00`–`17`, which is the order in wh
 ├── README.md
 ├── LICENSE                          MIT (code)
 ├── requirements.txt
-├── notebooks/                       Google Colab notebooks (steps 01, 03, 04, 11, 14, 16)
+├── notebooks/                       Google Colab notebooks (steps 01, 03, 04, 11, 14, 16) and run_all_scripts.ipynb
 ├── scripts/                         Python scripts (all other steps)
 ├── data/
 │   ├── raw/                         not redistributed — see "Data sources"
@@ -61,6 +62,8 @@ Notebooks and scripts share one numbering, `00`–`17`, which is the order in wh
 | 17 | `scripts/17_sensitivity_vii_station_scale.py` | Sensitivity (vii), station-scale ratio | output of step 15 | printed | ✓ |
 
 † Builds processed tables from raw inputs that are not redistributed (satellite PM2.5 rasters, WorldPop, PCD station data, OSM extract). Its outputs are already in `data/processed/`, so later steps do not depend on running it.
+
+**All scripts in Colab:** `notebooks/run_all_scripts.ipynb` [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/songwutsa/paper3-pm25-healthcare-visits-saraburi/blob/main/notebooks/run_all_scripts.ipynb) runs steps 02–17 that are scripts in run order (about 5 minutes), shows each table and figure, and checks the outputs against the stored versions. Step 00 is off by default.
 
 Script commands (from the repository root):
 
